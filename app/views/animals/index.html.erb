@@ -2,32 +2,33 @@
 
 <h1>Animals</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Specie</th>
-      <th>Breed</th>
-      <th>Gender</th>
-      <th>Age</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @animals.each do |animal| %>
+<div class="row">
+  <div class="col-9">
+    <table class="table table-bordered table-hover">
+      <thead>
       <tr>
-        <td><%= animal.specie.capitalize %></td>
-        <td><%= animal.breed.capitalize %></td>
-        <td><%= animal.gender.capitalize %></td>
-        <td><%= animal.age %></td>
-        <td><%= link_to 'Show', animal %></td>
-        <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
-        <td><%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th scope="col">Specie</th>
+        <th scope="col">Breed</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Age</th>
+        <th colspan="3" class="text-center">Actions</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      </thead>
+      <tbody>
+      <% @animals.each do |animal| %>
+        <tr>
+          <td><%= animal.specie.capitalize %></td>
+          <td><%= animal.breed.capitalize %></td>
+          <td><%= animal.gender.capitalize %></td>
+          <td><%= animal.age %></td>
+          <td><%= link_to 'Show', animal %></td>
+          <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
+          <td><%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
 <%= link_to 'New Animal', new_animal_path %>
