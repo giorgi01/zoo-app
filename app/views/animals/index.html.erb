@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Animals</h1>
-
 <div class="row">
   <div class="col-9">
+    <%= will_paginate @animals, :page_links => false %>
+    <br>
     <table class="table table-bordered table-hover">
       <thead>
       <tr>
@@ -28,6 +29,7 @@
       <% end %>
       </tbody>
     </table>
+    <%= will_paginate @animals, :page_links => false %>
 
     <br>
 
