@@ -40,6 +40,10 @@ class AnimalsController < ApplicationController
     redirect_to animals_path
   end
 
+  def search
+    @requested_animals = Animal.search(params[:keyword])
+  end
+
   private
     def set_animal
       @animal = Animal.find(params[:id])
