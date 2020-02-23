@@ -41,7 +41,11 @@ class AnimalsController < ApplicationController
   end
 
   def search
-    @requested_animals = Animal.search(params[:keyword])
+  end
+
+  def result
+    @requested_animals = Animal.search(params[:keyword]).paginate(page: params[:page], per_page: 5)
+    @requested_keyword = params[:keyword]
   end
 
   private

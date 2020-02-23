@@ -1,0 +1,8 @@
+<%= form_with(model: @animal, local: true) do |form| %>
+
+  <div class="field", style="margin-top: 50px">
+    <%= form.label :search %>
+    <%= form.text_field :keyword %>
+  </div>
+  <%= submit_tag("Search") %>
+<% end %>

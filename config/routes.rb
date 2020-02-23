@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'welcome/home'
+  get 'pages/home'
   resources :animals
-  get 'animals/search'
-  root to: 'welcome#home'
+  get 'search', to: 'animals#search', as: 'search'
+  post 'search', to: 'animals#result'
+  root to: 'pages#home'
 end
