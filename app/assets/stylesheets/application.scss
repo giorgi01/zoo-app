@@ -26,24 +26,10 @@
     font-weight: bold;
 }
 
-#logo:hover {
-    color: fff;
-    text-decoration: none;
-}
-#blah {
-    color: white;
-    font-size: 80px;
-}
 
 #nav-logo {
-    color: black;
     font-size: 30px;
     font-weight: bold;
-}
-
-#navbarTogglerDemo03 {
-    color: black;
-    font-size: 20px;
 }
 
 .text-center{
@@ -80,10 +66,6 @@
     font-weight: bold;
 }
 
-.btn-xlarge {
-    font-size: 1.7em;
-    background-color: black;
-}
 
 
 .article-meta-details {
@@ -116,27 +98,4 @@
     border-top: 1px solid #eaeaea;
     padding-top: 15px;
     padding-bottom: 15px;
-}
-
-footer {
-    margin-top: 45px;
-    padding-top: 5px;
-    border-top: 1px solid #eaeaea;
-    color: #777;
-}
-
-footer a:hover {
-    color: #222;
-}
-
-footer small {
-    float: left;
-}
-footer ul {
-    float: right;
-    list-style: none;
-}
-footer ul li {
-    float: left;
-    margin-left: 15px;
 }

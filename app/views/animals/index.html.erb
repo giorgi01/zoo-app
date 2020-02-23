@@ -16,9 +16,9 @@
   <tbody>
     <% @animals.each do |animal| %>
       <tr>
-        <td><%= animal.specie %></td>
-        <td><%= animal.breed %></td>
-        <td><%= animal.gender %></td>
+        <td><%= animal.specie.capitalize %></td>
+        <td><%= animal.breed.capitalize %></td>
+        <td><%= animal.gender.capitalize %></td>
         <td><%= animal.age %></td>
         <td><%= link_to 'Show', animal %></td>
         <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
